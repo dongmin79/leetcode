@@ -24,14 +24,14 @@ class Solution:
         if not root:
             return []
         left = self.preorder_recursion(root.left)
-        right = self.preorder_recursion(root.left)
+        right = self.preorder_recursion(root.right)
         return [root.val] + left + right
 
     def inorder_recursion(self, root: TreeNode):
         if not root:
             return []
         left = self.preorder_recursion(root.left)
-        right = self.preorder_recursion(root.left)
+        right = self.preorder_recursion(root.right)
         return left + [root.val] + right
 
     def postorder_recursion(self, root: TreeNode):
